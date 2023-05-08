@@ -42,7 +42,7 @@ The biggest challenge of syncing audio in netflix and other streaming services i
 2. Download the movie/video you want to watch.
 3. Play the movie/video in the application offline.
 4. Now open the same movie/video in your browser and use the application as the audio source and the browser as the video source or the other way around.
-5. Make sure that both players their start time are set to zero (drag the slider to the start of the video and immediately press on pause).
+5. Make sure that start time of both players are set to zero (drag the slider to the start of the video and immediately press on pause).
 6. Select both play buttons, and link them to the tool.
 7. Press play on the tool and enjoy your movie/video in sync.
 
