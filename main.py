@@ -42,7 +42,8 @@ def start_with_delay():
     pyautogui.moveTo(vid_x, vid_y)
 
     # Wait for the delay and then click the video button.
-    time.sleep(delay / 1000)
+    # The -0.175 is to account for the time it takes to move the mouse to the button and to click.
+    time.sleep(max(0, delay / 1000 - 0.175))
     pyautogui.click(vid_x, vid_y)
 
 
@@ -149,7 +150,7 @@ set_delay = [
     # Set Delay
     [sg.Text("")],  # Empty line
     [calibrate_button],
-    [sg.Text("Try to determine the delay of your system")],
+    [sg.Text("Determine the delay of your system by clicking when you hear the ding.")],
     [sg.Text("")],  # Empty line
     [sg.Text("Or set it manually here:")],
     [

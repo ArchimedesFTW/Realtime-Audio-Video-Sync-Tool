@@ -3,4 +3,3 @@ pynput
 PySimpleGUI
 pillow
 simpleaudio
-```
