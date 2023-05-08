@@ -5,8 +5,6 @@ This tool allows you to synchronise an audio and video player to circumvent audi
 ## Why this project?
 I used to own a Google Nest Audio stereo pair, which I wanted to use to watch movies on my laptop. However, the audio latency was so bad (almost a full second) so I couldn't use them for that. Google still hasn't fixed this and after 2 years of people complaining finally provided [a statement saying that they do not recommend using it as a TV speaker](https://www.googlenestcommunity.com/t5/Speakers-and-Displays/Terrible-delay-with-2-nest-audio-pair-with-tv/m-p/86157/highlight/true). Since I saw that a lot of people (including me) had the problem and are stuck with the speakers, I decided to create this tool.
 
-DISCLAIMER: It is not the most practical solution, but it works for a lot of cases for me. So hopefully it works for you too.
-
 ## Who is this project for?
 Anyone who has a speaker or headphone with a high audio latency and wants to watch a video on their laptop or computer in sync. I built this tool with the Google Nest Audio in mind, but it should work with any speaker that uses bluetooth or has casting functionality (syncing a casting device is explained [here](https://github.com/ArchimedesFTW/Realtime-Audio-Video-Sync-Tool#casting)).
 
