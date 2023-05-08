@@ -34,6 +34,8 @@ def start_with_delay():
     pyautogui.moveTo(audio_x, audio_y, duration=0.5)
 
     # Play the audio video
+    # Wait a bit to load the playbutton if unfocused
+    time.sleep(0.2)
     pyautogui.click()
 
     # Move to video button
@@ -53,7 +55,7 @@ def on_click(x, y, button, pressed):
     global click_x, click_y
 
     # If you want to bind the script to a different button, change the if statement
-    if button.name == "middle" and pressed:
+    if button.name == "right" and pressed:
         click_x = x
         click_y = y
         return False
@@ -61,7 +63,7 @@ def on_click(x, y, button, pressed):
 
 def get_click_pos(name=""):
     """
-    Wait for the user to click the middle mouse button and save the position.
+    Wait for the user to click the right mouse button and save the position.
 
     name: The name of the file to save a screenshot to of the click location, iff provided.
 
@@ -81,7 +83,7 @@ def get_click_pos(name=""):
         offset = screenshot_size // 2
         print(f"{click_x}  {click_y}")
         pyautogui.screenshot(
-            name + ".png",
+            "./resources/" + name + ".png",
             region=(
                 click_x - offset,
                 click_y - offset,
@@ -104,7 +106,7 @@ def calibrate():
         t_start_delay = time.time()
 
         # Start thread to playsound
-        wave_obj = sa.WaveObject.from_wave_file("delay_detector.wav").play()
+        wave_obj = sa.WaveObject.from_wave_file("./resources/delay_detector.wav").play()
 
         # Provide UI feedback
         calibrate_button.update(text="Click on the 4th beat")
@@ -217,7 +219,7 @@ while True:
     elif event == "audio_pos_button":  # A file was chosen from the listbox
         window.hide()
         sg.Popup(
-            "Click with the middle mouse button on the play button of player that will play the audio",
+            "Click with the right mouse button on the play button of player that will play the audio",
             title="Select Audio Source",
             non_blocking=True,
             button_type=sg.POPUP_BUTTONS_NO_BUTTONS,
@@ -225,13 +227,13 @@ while True:
             auto_close=True,
         )
         audio_x, audio_y = get_click_pos("audio")
-        window["audio_pos_img"].update("audio.png")
+        window["audio_pos_img"].update("./resources/audio.png")
         window.un_hide()
 
     elif event == "vid_pos_button":
         window.hide()
         sg.Popup(
-            "Click with the middle mouse button on the play button of the player you want to play the video on",
+            "Click with the right mouse button on the play button of the player you want to play the video on",
             title="Select Audio Source",
             non_blocking=True,
             button_type=sg.POPUP_BUTTONS_NO_BUTTONS,
@@ -239,7 +241,7 @@ while True:
             auto_close=True,
         )
         vid_x, vid_y = get_click_pos("video")
-        window["vid_pos_img"].update("video.png")
+        window["vid_pos_img"].update("./resources/video.png")
         window.un_hide()
 
     # If the play button is pressed, check if we have all the information we need

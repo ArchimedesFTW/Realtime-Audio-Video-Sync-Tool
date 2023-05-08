@@ -1,14 +1,14 @@
 # Realtime Audio Video Sync Tool
-This tool allows you to synchronise an audio and video player to circumvent audio latency caused wireless speakers or headphones.
+This tool allows you to synchronise an audio and video player to circumvent audio latency caused by wireless speakers or headphones. It uses a simple workaround to fix the problem, which offers a broad range of use-cases.
 
 
 ## Why this project?
-I used to own a Google Nest Audio stereo pair, which I wanted to use to watch movies on my laptop. However, the audio latency was so bad (almost a full second) so I couldn't use them for that. Since I saw that a lot of people had the same issue and that Google still hasn't fixed this and now finally provided [a statement saying that they do not recommend using it as a TV speaker](https://www.googlenestcommunity.com/t5/Speakers-and-Displays/Terrible-delay-with-2-nest-audio-pair-with-tv/m-p/86157/highlight/true); I decided to create this tool.
+I used to own a Google Nest Audio stereo pair, which I wanted to use to watch movies on my laptop. However, the audio latency was so bad (almost a full second) so I couldn't use them for that. Google still hasn't fixed this and after 2 years of people complaining finally provided [a statement saying that they do not recommend using it as a TV speaker](https://www.googlenestcommunity.com/t5/Speakers-and-Displays/Terrible-delay-with-2-nest-audio-pair-with-tv/m-p/86157/highlight/true). Since I saw that a lot of people (including me) had the problem and are stuck with the speakers, I decided to create this tool.
 
-It is not the most practical solution, but it works for a lot of cases. So hopefully it works for you to and that's why I am sharing it with you.
+DISCLAIMER: It is not the most practical solution, but it works for a lot of cases for me. So hopefully it works for you too.
 
 ## Who is this project for?
-Anyone who has a speaker or headphone with a high audio latency and wants to watch a video on their laptop or computer in sync. I built this tool with the Google Nest Audio in mind, but it should work with any speaker that uses bluetooth or has casting functionality (syncing with casting  will be explained further below).
+Anyone who has a speaker or headphone with a high audio latency and wants to watch a video on their laptop or computer in sync. I built this tool with the Google Nest Audio in mind, but it should work with any speaker that uses bluetooth or has casting functionality (syncing a casting device is explained [here](https://github.com/ArchimedesFTW/Realtime-Audio-Video-Sync-Tool#casting)).
 
 Bear in mind that this tool is a workaround to fix the problem but  . My reasoning is that if you have a speaker with a high audio latency, you probably don't want to buy a new one.
 
@@ -28,18 +28,32 @@ The biggest challenge of syncing audio is not using this tool (hopefully), but p
 
 Below I will list a lot of different use cases and tell you how you can use this tool in that case. If you have a use case that is not listed here and you know a solution. Please let me know and I will add it to the list.
 
-#### Netflix (and probably other streaming services)
+#### Netflix (and other streaming services)
 Since Netflix prevents you from watching a video in multiple tabs and it does so by checking your IP-address. You will need to perform a clever trick:
 
 1. Get the Netflix/other streaming service application. 
 2. Download the movie/video you want to watch.
 3. Play the movie/video in the application offline.
 4. Now open the same movie/video in your browser and use the application as the audio source and the browser as the video source or the other way around.
+5. Make sure that both players their start time are set to zero (drag the slider to the start of the video and immediately press on pause).
+6. Select both play buttons, and link them to the tool.
+7. Press play on the tool and enjoy your movie/video in sync.
 
+_7.1. If you want to pause the video open the tool and press the pause button. Make sure that both play buttons are at the same location ._
 
 
 
 #### Any website on which you want to watch and play a video.
+1. Open the video you want to watch in your browser.
+2. Copy the link and open it in a new browser window.
+3. Start both videos already, so they can buffer and play any possible adds.
+4. Now open the tool and select both play buttons by pressing the right mouse button.
+5. Mute the video in the browser window that you want to use as the video source.
+6. Press play on the tool and enjoy your video in sync.
+
+
+
+_**Tip** For most websites it is possible to watch a video. To do this set both videos to the 0:00 starttime, making them equal. Then, use the right arrow key to forward the video to your desired starttime in both players._
 
 
 #### Youtube
@@ -56,15 +70,16 @@ https://wiki.videolan.org/VLC_HowTo/Adjust_audio_delay/
 
 
 ## Installation
-```pip install -r requirements.txt```
-```python main.py```
+```bash
+pip install -r requirements.txt
+python main.py
+```
 
 
 ## Other tips
 
 #### Casting
-To 
-
+In order to , cast your browser tab to your chromecast and use that tab as the audio source. Your video source can be anything else. To cast your browser tab, read here:
 
 https://support.google.com/chromecast/answer/3228332?hl=en 
 
