@@ -44,7 +44,6 @@ def start_with_delay():
     # Wait for the delay and then click the video button.
     time.sleep(delay / 1000)
     pyautogui.click(vid_x, vid_y)
-    print("Synced")
 
 
 def on_click(x, y, button, pressed):
@@ -81,7 +80,6 @@ def get_click_pos(name=""):
     # Make screenshot if desired
     if len(name) > 0:
         offset = screenshot_size // 2
-        print(f"{click_x}  {click_y}")
         pyautogui.screenshot(
             "./resources/" + name + ".png",
             region=(
@@ -105,7 +103,7 @@ def calibrate():
         calibrating = True
         t_start_delay = time.time()
 
-        # Start thread to playsound
+        # Play audio sync file
         wave_obj = sa.WaveObject.from_wave_file("./resources/delay_detector.wav").play()
 
         # Provide UI feedback
@@ -135,7 +133,7 @@ invalid_input_text = sg.Text(
 )
 
 
-# Create GUI
+# ----- Start GUI -----
 set_delay = [
     [
         sg.Text(

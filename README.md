@@ -20,16 +20,25 @@ The tool works by playing the same video in 2 players, where you use one players
 
 As simple as this sounds, getting to play the same video in 2 players is not always as easy as it sounds. I will explain how to do this in the next section.
 
-## How to use this tool
-You
 
-## How to use this tool in different use cases
-The biggest challenge of syncing audio is not using this tool (hopefully), but playing the same video in 2 different players. Streaming services do not want you to do that, but I found a workaround for that.
+## How to use this tool 
 
 Below I will list a lot of different use cases and tell you how you can use this tool in that case. If you have a use case that is not listed here and you know a solution. Please let me know and I will add it to the list.
 
-#### Netflix (and other streaming services)
-Since Netflix prevents you from watching a video in multiple tabs and it does so by checking your IP-address. You will need to perform a clever trick:
+### General Approach - Any website on which you want to watch and play a video.
+This approach describes the general approach to use this tool. It works for most websites, but not for all. For example, it does not work for Netflix. For Netflix, you will need to use the approach described in the next section.
+
+1. Open the video you want to watch in your browser.
+2. Copy the link and open it in a new browser window.
+3. Start both videos already, so they can buffer and play any possible adds.
+4. Now open the tool and select both play buttons by pressing the right mouse button.
+5. Mute the video in the browser window that you want to use as the video source.
+6. Press play on the tool and enjoy your video in sync.
+
+_7.1. If you want to pause the video open the tool and press the pause button. Make sure that both play buttons are still at the same location._
+
+#### Netflix and other streaming services workaround
+The biggest challenge of syncing audio in netflix and other streaming services is that you can't play the same video in multiple tabs as it does so by checking your IP address. This means that you can't use the general approach described above. However, there is a workaround for this:
 
 1. Get the Netflix/other streaming service application. 
 2. Download the movie/video you want to watch.
@@ -39,21 +48,10 @@ Since Netflix prevents you from watching a video in multiple tabs and it does so
 6. Select both play buttons, and link them to the tool.
 7. Press play on the tool and enjoy your movie/video in sync.
 
-_7.1. If you want to pause the video open the tool and press the pause button. Make sure that both play buttons are at the same location ._
+_7.1. If you want to pause the video open the tool and press the pause button. Make sure that both play buttons are still at the same location ._
 
 
-
-#### Any website on which you want to watch and play a video.
-1. Open the video you want to watch in your browser.
-2. Copy the link and open it in a new browser window.
-3. Start both videos already, so they can buffer and play any possible adds.
-4. Now open the tool and select both play buttons by pressing the right mouse button.
-5. Mute the video in the browser window that you want to use as the video source.
-6. Press play on the tool and enjoy your video in sync.
-
-
-
-_**Tip** For most websites it is possible to watch a video. To do this set both videos to the 0:00 starttime, making them equal. Then, use the right arrow key to forward the video to your desired starttime in both players._
+_**Tip** For most websites it is possible to watch a video in sync without having to start to watch the video from the beginning. To do this set both videos to the 0:00 starttime, making them equal. Then, use the right arrow key to forward the video to your desired starttime in both players._
 
 
 #### Youtube
@@ -70,20 +68,20 @@ https://wiki.videolan.org/VLC_HowTo/Adjust_audio_delay/
 
 
 ## Installation
+You can install and run the tool yourself using:
 ```bash
 pip install -r requirements.txt
 python main.py
 ```
 
+It has been tested/built with python 3.11 but most other versions should work too.
 
 ## Other tips
 
 #### Casting
-In order to , cast your browser tab to your chromecast and use that tab as the audio source. Your video source can be anything else. To cast your browser tab, read here:
+If your system doesn't have bluetooth but the speaker does support audio casting, you can still use this tool. To do this, you would need to cast your browser tab to your chromecast and use that tab as the audio source. Your video source can be anything else. To cast your browser tab, read here:
 
 https://support.google.com/chromecast/answer/3228332?hl=en 
-
-
 
 #### Defeating non-constant audio latency
 If you have a speaker who's latency changes everytime you start playing an video, you can make the latency constant by playing a silent audio file in the background. You can find a silent audio files here:
