@@ -1,0 +1,6 @@
+pyautogui
+pynput
+PySimpleGUI
+pillow
+simpleaudio
+```
