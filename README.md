@@ -14,21 +14,21 @@ Bear in mind that this tool is a workaround to fix the problem but  . My reasoni
 ## How it works
 The concept is fairly simple and is based on the fact that the audio latency is constant. This means that if you know the audio latency, you can delay the video by the same amount of time and the audio and video will be in sync.
 
-The tool works by playing the same video in 2 players, where you use one players as the audio source and the other as the video source. The tool will then calculate the audio latency and delay the video by the same amount of time.
+The tool works by playing the same video in 2 players, where you use one player as the audio source and the other as the video source. The tool will then calculate the audio latency and delay the video by the same amount of time.
 
 As simple as this sounds, getting to play the same video in 2 players is not always as easy as it sounds. I will explain how to do this in the next section.
 
 
 ## How to use this tool 
 
-Below I will list a lot of different use cases and tell you how you can use this tool in that case. If you have a use case that is not listed here and you know a solution. Please let me know and I will add it to the list.
+Below I will list different use cases and explain how you can use this tool in each case. If you have a use case that is not listed here and you know a solution please let me know and I will add it to the list.
 
 ### General Approach - Any website on which you want to watch and play a video.
-This approach describes the general approach to use this tool. It works for most websites, but not for all. For example, it does not work for Netflix. For Netflix, you will need to use the approach described in the next section.
+This approach describes the general approach to use this tool. It works for most websites, but not for all. For example, it does not work for Netflix. For Netflix, need use the approach described in the next section.
 
 1. Open the video you want to watch in your browser.
 2. Copy the link and open it in a new browser window.
-3. Start both videos already, so they can buffer and play any possible adds.
+3. Start both videos so they can buffer and play any possible adds.
 4. Now open the tool and select both play buttons by pressing the right mouse button.
 5. Mute the video in the browser window that you want to use as the video source.
 6. Press play on the tool and enjoy your video in sync.
