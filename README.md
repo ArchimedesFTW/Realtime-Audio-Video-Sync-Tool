@@ -66,7 +66,14 @@ https://wiki.videolan.org/VLC_HowTo/Adjust_audio_delay/
 
 
 ## Installation
-You can install and run the tool yourself using:
+You can find a zip file with the tool [here](https://github.com/ArchimedesFTW/Realtime-Audio-Video-Sync-Tool/releases).
+
+Extract the zip and run the executable.
+
+
+#### Python install
+
+You can install run and modify the tool yourself using:
 ```bash
 pip install -r requirements.txt
 python main.py
